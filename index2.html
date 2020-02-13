@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="css/fullPage.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+   <div id="fullpage">
+        <div class="section">
+            第一页
+        </div>
+        <div class="section">
+                <section class="section second">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-4 is-animated">
+                                    <img class="img-responsive" src="https://placeimg.com/300/350/nature">
+                                </div>
+                                <div class="col-sm-4 is-animated">
+                                    <img class="img-responsive" src="https://placeimg.com/300/350/people">
+                                </div>
+                                <div class="col-sm-4 is-animated">
+                                    <img class="img-responsive" src="https://placeimg.com/300/350/tech">
+                                </div>
+                                <div class="col-xs-12 text-center is-animated__single">
+                                    <button type="button" class="btn btn-lg">A Simple Button</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+        </div>
+   </div>     
+        
+    <script src="js/jquery-2.1.0.js"></script>
+    <script src="js/fullPage.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage();
+        })
+        var $isAnimatedSecond = $('.second .is-animated'),
+    $isAnimatedSecondSingle = $('.second .is-animated__single');
+    $isAnimatedSecond.addClass('animated fadeInUpBig'); 
+    $isAnimatedSecond.eq(0).css('animation-delay', '1.3s');
+    $isAnimatedSecond.eq(1).css('animation-delay', '1.6s');
+    $isAnimatedSecond.eq(2).css('animation-delay', '1.9s');
+    $isAnimatedSecondSingle.addClass('animated rollIn').css('animation-delay', '1.7s');
+    </script>
+</body>
+
+</html>
